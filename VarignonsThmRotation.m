@@ -14,7 +14,8 @@ for i=1:4
 endfor
 for lambda=0:0.01:1
 %Representació de les unions entre punts sobre el pla
-hold off;
+clf;
+%hold off;
 for i=1:3
   axis off;
   hold on;

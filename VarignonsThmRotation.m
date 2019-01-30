@@ -18,12 +18,14 @@ while true
   clf;
   %hold off;
   for i=1:3
-    axis off;
+    axis on;
+    grid on;
     hold on;
     plot([punts(i,1) punts((i+1),1)],[punts(i,2) punts((i+1),2)],'k')
   endfor
   hold on;
-  axis off;
+  grid on;
+  axis on;
   plot([punts(4,1) punts(1,1)],[punts(4,2) punts(1,2)],'k')
 
     %Càlcul dels punts mitjans dels segments
@@ -52,11 +54,13 @@ while true
     endfor
     %Representació del paral·lelogram comprès dins la figura quadrangular
     for i=1:3
-      axis off;
+      axis on;
+      grid on;
       hold on;
       plot([puntsDef(i,1) puntsDef((i+1),1)],[puntsDef(i,2) puntsDef((i+1),2)],'g')
     endfor
-    axis off;
+    axis on;
+    grid on;
     hold on;
     plot([puntsDef(4,1) puntsDef(1,1)],[puntsDef(4,2) puntsDef(1,2)],'g')
     %text(['Nombre de radis: '])
@@ -76,7 +80,7 @@ while true
     %resultant=sqrt(quadratX+quadratY);
     
     text(max(valorsX)*1.05,max(valorsY),['Valor de Lambda: ',num2str(lambda)])
-    text(max(valorsX)*1.05,max(valorsY),["\n\nArea:",num2str(areaFigura)]);
+    text(max(valorsX)*1.05,max(valorsY),["\n\nArea: ",num2str(areaFigura)])
     pause(0.1)
   endfor
 endwhile
